@@ -17,7 +17,6 @@ INITIAL_PRICE = 10.0
 FILENAME = "Daily_price_records.txt"
 
 price = INITIAL_PRICE
-print(f"${price:,.2f}")
 number_of_days = 0
 
 while MIN_PRICE <= price <= MAX_PRICE:
@@ -37,9 +36,11 @@ while MIN_PRICE <= price <= MAX_PRICE:
 
     price *= (1 + price_change)
     #print(f"${price:,.2f}")
-    if number_of_days == 1
-        out_file = open(FILENAME, "w")
-        print("Starting price is $", {INITIAL_PRICE:.2f}, file=out_file)
-        out_file.close()
-    out_file = open(FILENAME, "w")
-    print("On day", {number_of_days} "price is $", price, file=out_file)
+    if number_of_days == 1:
+        with open(FILENAME, "w") as out_file:
+            print(f"Starting price is ${INITIAL_PRICE:.2f}", file=out_file)
+
+    with open(FILENAME, "a") as out_file:
+        print(f"On day {number_of_days} price is $ {price:.2f}", file=out_file)
+# REFRACTOR THIS LATER, MAKE MORE EFFICIENT.
+# ALSO change it so price above $1000, reduced to $1000
