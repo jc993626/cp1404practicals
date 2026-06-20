@@ -17,3 +17,15 @@ while state_code != "":
     else:
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
+
+# for state in CODE_TO_NAME:
+#     print(f"{state:3} is {CODE_TO_NAME[state]:30} ")
+# OR this below,
+# max_length = max(len(name) for name in list(name_to_age.keys()))
+#max_lenth = max(len(state)) for state in list(CODE_TO_NAME.value()):
+max_length = max(len(CODE_TO_NAME[state]) for state in CODE_TO_NAME)
+print(max_length)
+for state in CODE_TO_NAME:
+    print(f"{state:3}   is   {CODE_TO_NAME[state]:{max_length}}")
+
+
