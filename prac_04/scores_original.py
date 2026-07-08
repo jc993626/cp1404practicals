@@ -15,18 +15,14 @@ def main():
     scores_file = open("scores.csv")
     scores_data = scores_file.readlines()
     print(scores_data)
-    subjects = scores_data[0].strip().split(",") # first line
-    print(subjects)
-    scores = [scores_data[1:]]
-    print(scores)
-    line_count = 0
-
+    subjects = scores_data[0].strip().split(",") #first line
+    score_values = []
+    for score_line in scores_data[1:]:
+        score_strings = score_line.strip().split(",")
+        score_numbers = [int(value) for value in score_strings]
+        score_values.append(score_numbers)
     scores_file.close()
     for i in range(len(subjects)):
-            for j in range(line_count):
-                print(subjects[i])
-                pring()
-
         print(subjects[i], "Scores:")
         for score in score_values[i]:
             print(score)
