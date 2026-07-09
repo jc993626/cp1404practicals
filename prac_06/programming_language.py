@@ -1,5 +1,5 @@
 """Estimated time :80min
-    Actual time : 58min (quicker after doing this weeks seminar)
+    Actual time : 70min (quicker after doing this weeks seminar)
 """
 
 

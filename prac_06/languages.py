@@ -19,6 +19,11 @@ def main():
     languages.append(ruby)
     languages.append(visual_basic)
     print(languages)
+    # print([language.programming_name for language in languages if language.is_dynamic()])
+    print("The dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(f"\t{language.programming_name}")
 
 
 
