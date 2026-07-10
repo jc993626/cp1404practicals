@@ -12,8 +12,8 @@ class Guitar:
         return f"{self.name} ({self.year}) : ${self.cost:,}"
 
     def get_age(self):
-        age = datetime.datetime.now().year - self.year
-        return f"In {datetime.datetime.now().year} the {self.name} is {age} years old"
+        return datetime.datetime.now().year - self.year
+        # return f"In {datetime.datetime.now().year} the {self.name} is {age} years old"
 
     def is_vintage(self):
         return self.get_age() >= 50
