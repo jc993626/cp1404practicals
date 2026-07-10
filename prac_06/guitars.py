@@ -3,6 +3,8 @@
 from guitar import Guitar
 
 def main():
+    """Take a Guitar parameters until empty string is entered for guitar_name
+        and store class objects in a list."""
     guitars = []
     guitar_name = input("Enter guitar name: ")
     while guitar_name != "":

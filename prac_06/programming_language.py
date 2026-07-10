@@ -6,7 +6,7 @@
 class ProgrammingLanguage:
     """Programming Language class."""
     def __init__(self, programming_name = "", typing = "", reflection = "", year = ""):
-        """Programming Language class constructor."""
+        """Create instance variables."""
         self.programming_name = programming_name
         self.typing = typing
         # self.dynamic = dynamic
@@ -15,17 +15,17 @@ class ProgrammingLanguage:
 
 
     def is_dynamic(self):
-        """Boolean return for Programming Language typing."""
+        """Return boolean for Programming Language typing."""
         return self.typing == "Dynamic"
 
 
     def __str__(self):
-        """String return for Class."""
+        """Return string for Class."""
         return f"{self.programming_name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
 
     def __repr__(self):
-        """Method to print strings inside objects created."""
+        """Print strings inside objects created."""
         # return str(self)
         return f"{self.programming_name} {self.typing} {self.reflection} {self.year}"
 #            python = ProgrammingLanguage("Python", "Dynamic", True, 1991)              INPUT
