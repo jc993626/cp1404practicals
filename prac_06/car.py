@@ -26,10 +26,12 @@ class Car:
         Drive given distance if car has enough fuel
         or drive until fuel runs out return the distance actually driven.
         """
+
         if distance > self.fuel:
             distance = self.fuel
             self.fuel = 0
+            distance_string = f""
         else:
             self.fuel -= distance
         self._odometer += distance
-        return distance
+        return f"The car drove {distance_string} km."
