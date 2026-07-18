@@ -11,7 +11,7 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        return f"{self.name} ({self.year}) : ${self.cost:,}"
+        return f"{self.name:30} ({self.year}) : ${self.cost:10,.2f}"
 
     def __repr__(self):
         return f"{self.name}, {self.year}, ${self.cost:,.2f}"
@@ -22,6 +22,9 @@ class Guitar:
 
     def is_vintage(self):
         return "(Vintage)" if self.get_age() >= 50 else ""
+
+    def __lt__(self, other):
+        return self.year < other.year
 
 
 
