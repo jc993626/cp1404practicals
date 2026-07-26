@@ -1,0 +1,29 @@
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        text: 'Enter Miles to convert'
+        size_hint_y: 0.25
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.5
+        Label:
+            text: 'Enter miles here ->'
+            size_hint_x: 0.25
+        TextInput:
+            id: miles_input
+            multiline: False
+            size_hint_x: 0.5
+        Button:
+            text: 'CONVERT'
+            size_hint_x: 0.25
+            on_press: app.convert_miles_km(miles_input.text)
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.25
+        Label:
+            text: 'Km ->'
+        Label:
+            id: km_result
+            text: app.kilometres
+            color: (1, 0.569, 0.690, 1)
+
